@@ -28,7 +28,7 @@ describe('Escrow', () => {//put all the tests here for escrow contract
             seller.address, inspector.address, lender.address
         )
 
-        // //Approve property to send through listing
+        //Approve property to send through listing
         transaction = await realEstate.connect(seller).approve(escrow.address, 1);
         await transaction.wait()
 
