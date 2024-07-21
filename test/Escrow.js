@@ -80,5 +80,14 @@ describe('Escrow', () => {//put all the tests here for escrow contract
         })
     })
 
+    describe('Deposits', () => {
+        it("Updates contact balance", async () => {
+            const transaction = await escrow.connect(buyer).depositEarnest(1, {value: tokens(5)})
+            await transaction.wait()
+            const result = await escrow.getBalance()
+            expect(result).to.be.equal(tokens(5))
+        })
+    })
+
 })
 
