@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 
 contract RealEstate is ERC721URIStorage {
-     uint256 public _nextTokenId;
+    uint256 public _nextTokenId;
 
     constructor() ERC721("Real Estate", "REAL") {}
 
@@ -17,5 +17,9 @@ contract RealEstate is ERC721URIStorage {
         _setTokenURI(tokenId, tokenURI);
 
         return tokenId;
+    }
+
+    function totalSupply() public view returns (uint256) {
+        return _nextTokenId;
     }
 }

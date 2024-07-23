@@ -49,7 +49,7 @@ async function main() {
   await transaction.wait()
   transaction = await escrow.connect(seller).list(3, buyer.address, tokens(10), tokens(5))
   await transaction.wait()
-
+  console.log(realEstate.address)
   console.log('finished...')
 
 }
