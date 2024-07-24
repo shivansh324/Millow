@@ -1,4 +1,5 @@
 # Real Estate NFT DApp
+![image](https://github.com/user-attachments/assets/49fb1f7b-c370-44ca-aaca-54a57d3bda90)
 
 ## Technology Stack & Tools
 
